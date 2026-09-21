@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BLOG SPHERE</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .site-title {
+        display: inline-block; /* important for background-clip */
+        font-family: 'Playfair Display', serif;
+        font-size: 60px; /* bigger */
+        font-weight: 700;
+        text-align: center;
+        margin: 30px auto 10px;
+        background: linear-gradient(90deg, #ff6a00, #ee0979);
+        color: #ff6a00; /* fallback for Firefox */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text; /* harmless fallback */
+        animation: fadeInDown 1s ease-in-out;
+        letter-spacing: 2px;
+      }
+
+      .title-underline {
+        width: 120px;
+        height: 4px;
+        background: linear-gradient(90deg, #ff6a00, #ee0979);
+        margin: 0 auto 20px;
+        border-radius: 2px;
+        animation: growLine 1s ease-in-out;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes growLine {
+        from {
+          width: 0;
+          opacity: 0;
+        }
+        to {
+          width: 120px;
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="site-title">BLOG SPHERE</h1>
+    <div class="title-underline"></div>
+
+    <div id="root"></div>
+    <script src="/bundle.js"></script>
+  </body>
+</html>
