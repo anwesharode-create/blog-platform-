@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://blog-platform--s41m.onrender.com/api",
+  baseURL: "https://blog-platform-uedk.onrender.com/api",
   withCredentials: true,
 });
 
